@@ -1,6 +1,13 @@
-BIN := ../bin/
+CC = gcc
 
-STACK := stack.c
+BIN = ../bin/
+
+OBJECT = stack queue
+
+all : $(OBJECT)
 
 stack :
-	gcc -o $(BIN)stack $(STACK)
+	$(CC) -o $(BIN)stack stack.c
+
+queue :
+	$(CC) -o $(BIN)queue queue.c
